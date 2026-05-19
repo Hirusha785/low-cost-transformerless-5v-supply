@@ -47,71 +47,20 @@ The circuit converts AC mains input into regulated 5V DC through the following s
 
 ---
 
-## Circuit Operation
+## Circuit Operation 
 
-### 1. AC Input
-
-AC mains is connected through the input screw terminal `J1`.
-
-Because this design does not use a transformer, the output is not isolated from the AC mains side.
-
----
-
-### 2. Capacitive Dropper Stage
-
-The capacitor `C4` acts as the main current-limiting component.
-
-Instead of using a transformer to reduce voltage, this circuit uses the reactance of the capacitor to limit current from the AC mains supply.
-
-`R3` is connected across the dropper capacitor and works as a discharge resistor. It helps discharge the capacitor after the circuit is disconnected from power.
-
----
-
-### 3. Bridge Rectifier Stage
-
-Diodes `D1`, `D2`, `D3`, and `D4` form a bridge rectifier using 1N4007 diodes.
-
-The bridge rectifier converts the AC input into pulsating DC.
-
----
-
-### 4. Filtering Stage
-
-`C1` provides high-frequency noise filtering.
-
-`C2` smooths the rectified DC voltage and reduces ripple before the regulator section.
-
----
-
-### 5. Zener Protection Stage
-
-`D5` and `D6` are zener diodes used for voltage clamping/protection before the regulator stage.
-
-`R1` and `R2` are used with the protection stage to help limit and control current.
-
----
-
-### 6. Voltage Regulation Stage
-
-`U1` is an LM7805 / 7805 voltage regulator in a TO-220 package.
-
-The regulator provides a stable 5V DC output from the rectified and filtered input voltage.
-
----
-
-### 7. Output Filtering
-
-`C5` smooths the final 5V DC output and helps reduce output ripple.
-
----
-
-### 8. Power Indicator
-
-`D7` is the LED power indicator.
-
-`R4` limits the LED current.
-
-When the circuit is powered, the LED turns on to show that output power is available.
+AC mains input is connected through J1.
+C4 works as the capacitive dropper and limits the input current.
+R3 discharges C4 after power is removed.
+D1–D4 form the bridge rectifier and convert AC to DC.
+C1 filters high-frequency noise.
+C2 smooths the rectified DC voltage and reduces ripple.
+D5 and D6 provide Zener voltage protection/clamping.
+R1 and R2 help limit current in the protection stage.
+U1 is the 7805 voltage regulator and provides regulated 5V DC output.
+C5 smooths the final 5V output.
+D7 and R4 work as the power indicator circuit.
+Since this is a transformerless design, the output is not isolated from AC mains and must be handled carefully.
 
 ---
 
@@ -137,26 +86,6 @@ When the circuit is powered, the LED turns on to show that output power is avail
 | D7 | LED | Power indicator |
 | R4 | 2.2kΩ | LED current-limiting resistor |
 | J2 | Screw Terminal | 5V DC output connector |
-
----
-
-## Footprint Assignments
-
-| Reference | Value | Footprint |
-|---|---|---|
-| C1 | 0.1uF | Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm |
-| C2 | 1000uF | Capacitor_THT:CP_Radial_D10.0mm_P5.00mm |
-| C4 | 225k / 2.2uF | Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm |
-| C5 | 470uF | Capacitor_THT:CP_Radial_D10.0mm_P5.00mm |
-| D1-D4 | 1N4007 | Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal |
-| D5-D6 | Zener Diode | Diode_THT:D_A-405_P7.62mm_Horizontal |
-| D7 | LED | LED_THT:LED_D5.0mm |
-| J1 | AC Input | TerminalBlock:TerminalBlock_bornier-2_P5.08mm |
-| J2 | 5V Output | TerminalBlock:TerminalBlock_bornier-2_P5.08mm |
-| R1-R2 | 20kΩ | Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm |
-| R3 | 1MΩ | Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm |
-| R4 | 2.2kΩ | Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm |
-| U1 | LM7805_TO220 | Package_TO_SOT_THT:TO-220-3_Vertical |
 
 ---
 
