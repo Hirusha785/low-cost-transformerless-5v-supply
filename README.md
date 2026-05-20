@@ -115,17 +115,19 @@ The PCB was designed using KiCad and includes:
 ---
 
 ### PCB Layout
-<img width="851" height="659" alt="image" src="https://github.com/user-attachments/assets/e253e18b-10bd-440a-81dc-cf78d3940d15" />
+<img width="776" height="624" alt="image" src="https://github.com/user-attachments/assets/ca75a293-89ac-4561-96ae-4d5879a00643" />
+
+
 
 ![PCB Layout](pcb/pcb_layout.png)
 
 ---
 
 ### 3D View
-<img width="1044" height="812" alt="image" src="https://github.com/user-attachments/assets/c8b6038b-a696-433d-87dd-5ee0f1e2cc72" />
-<img width="1041" height="695" alt="image" src="https://github.com/user-attachments/assets/764469ae-08a8-4d1c-99b3-bc95fe86ff80" />
-<img width="717" height="765" alt="image" src="https://github.com/user-attachments/assets/7c917602-c226-4a30-94c4-bea376a2ef3e" />
-<img width="938" height="757" alt="image" src="https://github.com/user-attachments/assets/8d014ccc-e03c-44eb-9e0f-973e16904973" />
+<img width="845" height="803" alt="image" src="https://github.com/user-attachments/assets/130d263b-b9d3-45c2-b279-332134c3eccb" />
+<img width="1077" height="811" alt="image" src="https://github.com/user-attachments/assets/e32b748d-a15a-46c5-988a-e6beee53ee0a" />
+<img width="1043" height="808" alt="image" src="https://github.com/user-attachments/assets/b2714182-b46c-494b-bedc-58c272d17a5d" />
+<img width="892" height="744" alt="image" src="https://github.com/user-attachments/assets/84553d8e-5c14-4f6c-a72e-a41c5bd30e8f" />
 
 ![3D View](3d-view/top_3d_view.png)
 
